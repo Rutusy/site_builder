@@ -32,8 +32,9 @@ function searchNewElem () {
 			function closePopup(e) {
 				console.log('Funkciya start');
 				let oP = document.querySelectorAll('.img-upload');
+				let allselect = document.querySelectorAll('.element--image > *');
 				console.log(oP.length);
-				console.log(e.target);
+				console.log(allselect.length);
 			}
 			searchNewElem();
 		}
