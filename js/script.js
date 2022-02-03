@@ -28,6 +28,10 @@ function searchNewElem () {
 							  </label>
 							</div>
 							`;
+			document.addEventListener("click", closePopup);
+			function closePopup() {
+				console.log('Funkciya powla');
+			}
 			searchNewElem();
 		}
 	}
