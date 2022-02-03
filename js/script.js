@@ -203,7 +203,7 @@ function hideElem () {
 				chooseElem[i].style.display = '';
 				document.addEventListener('click', closeBar);
 				function closeBar(e) {
-					if (e.target != chooseElem[i]) {
+					if (e.target === chooseElem[i]) {
 						console.log('OK!');
 					}
 				}
