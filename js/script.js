@@ -194,10 +194,6 @@ let chooseElem = document.querySelectorAll('.choose-elem');
 // Скрываем панели добавления элементов и открываем по клику на плюс
 function hideElem (option) {
 	for (let i = 0; i < addBtn.length; i++) {
-		if (option === 'half') {
-			chooseElem[i].style.display = 'none';
-			return
-		} else if (option === 'full') {
 			chooseElem[i].style.display = 'none';
 			addBtn[i].addEventListener('click', openBar);
 			function openBar () {
@@ -206,7 +202,6 @@ function hideElem (option) {
 				};
 				chooseElem[i].style.display = '';
 			}
-		}
 	}
 }
 hideElem(full);
