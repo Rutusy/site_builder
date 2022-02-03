@@ -1,3 +1,12 @@
+// Функция поиска открытых img-upload и закрытие их при нажатии +
+function closePopup () {
+	let openedLoad = document.querySelectorAll('.img-upload');
+	for (let h=0; h < openedLoad.length; h++) {
+		openedLoad[h].style.display = 'none';
+	}
+};
+
+
 // После каждого создания элемента обновляем коллекцию кнопок удаления и вешаем обработчик на каждую иконку
 function searchNewElem () {
 	let popup = document.querySelectorAll('.img-upload');
@@ -83,7 +92,6 @@ for (let i = 0; i < gridSelectBtn.length; i++) {
 // Скрываем панели добавления элементов и обрабатываем клик по кнопке +
 let chooseElem = document.querySelectorAll('.choose-elem');
 let addBtn = document.querySelectorAll('.add-btn');
-let openedLoad = document.querySelectorAll('.img-upload');
 for (let i = 0; i < addBtn.length; i++) {
 	chooseElem[i].style.display = 'none';	
 	addBtn[i].onclick = function () {
@@ -91,10 +99,7 @@ for (let i = 0; i < addBtn.length; i++) {
 			chooseElem[j].style.display = 'none';
 		}
 		chooseElem[i].style.display = '';
-		
-		for (let h=0; h < openedLoad.length; h++) {
-			openedLoad[h].style.display = 'none';
-		}
+		closePopup();
 
 		// Создаем обертку элементов в блоке Хэдер/Контент/Футер по нажатию +. Запрещаем создание более  одной обертки.
 		let elementsWrapper = document.createElement('div');
