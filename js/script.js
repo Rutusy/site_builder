@@ -7,7 +7,6 @@ function closePopup () {
 			if (target) {
 				console.log('ok');
 			} else {
-				openedLoad[h].style.display = 'none';
 				console.log(openedLoad[h]);
 				console.log(h);
 				console.log(e.target);
