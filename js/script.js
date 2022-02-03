@@ -201,6 +201,12 @@ function hideElem () {
 					chooseElem[j].style.display = 'none';
 				};
 				chooseElem[i].style.display = '';
+				document.addEventListener('click', closeBar);
+				function closeBar(e) {
+					if (e.target != chooseElem[i]) {
+						console.log('OK!');
+					}
+				}
 			}
 	}
 }
