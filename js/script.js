@@ -210,6 +210,5 @@ hideElem();
 document.addEventListener('click', global);
 function global(e) {
 	console.log(e.target);
-	hideElem();
 }
 
