@@ -60,6 +60,11 @@ function searchNewElem () {
 						`;
 			searchNewElem();
 		}
+		let openP = document.querySelectorAll('.img-url');
+		openP[i].addEventListener('click', cP);
+		function cP() {
+			console.log(openP[i]);
+		}
 	}
 }
 
