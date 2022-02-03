@@ -195,7 +195,7 @@ let chooseElem = document.querySelectorAll('.choose-elem');
 for (let i = 0; i < addBtn.length; i++) {
 	chooseElem[i].style.display = 'none';	
 	addBtn[i].addEventListener('click', openBar);
-	
+}	
 function openBar () {
 	for (let j = 0; j < addBtn.length; j++) {
 	  chooseElem[j].style.display = 'none';
@@ -206,4 +206,4 @@ function openBar () {
 body.addEventListener('click', global);
 function global(e) {
   console.log(e.target);
-};
+}
