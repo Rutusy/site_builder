@@ -33,8 +33,8 @@ function searchNewElem () {
 				console.log('Funkciya start');
 				let oP = document.querySelectorAll('.img-upload');
 				let allselect = document.querySelectorAll('.img-upload > * ');
-				console.log(oP.length);
-				console.log(allselect[2]);
+				console.log(oP);
+				console.log(allselect);
 			}
 			searchNewElem();
 		}
