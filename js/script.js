@@ -204,7 +204,7 @@ function hideElem () {
 			}
 	}
 }
-hideElem(full);
+hideElem();
 
 // Обработчик на все клики по странице
 document.addEventListener('click', global);
