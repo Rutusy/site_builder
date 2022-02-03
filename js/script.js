@@ -34,7 +34,7 @@ function searchNewElem () {
 				let allselect = document.querySelectorAll('.img-upload > * ');
 				document.addEventListener("click", close);
 				function close () {
-					console.log(CLOSE);
+					console.log('CLOSE');
 				}
 			}
 			searchNewElem();
