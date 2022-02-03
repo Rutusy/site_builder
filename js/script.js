@@ -4,7 +4,7 @@ function closePopup () {
 	for (let h=0; h < openedLoad.length; h++) {
 		document.addEventListener('click', function(e) {
 			if (e.target !== openedLoad[i]) {
-				openedLoad[i].style.display = 'none';
+				openedLoad[h].style.display = 'none';
 			}
 		});
 	}
