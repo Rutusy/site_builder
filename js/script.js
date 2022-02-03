@@ -3,7 +3,8 @@ function closePopup () {
 	let openedLoad = document.querySelectorAll('.img-upload');
 	for (let h=0; h < openedLoad.length; h++) {
 		document.addEventListener('click', function(e) {
-			if (e.target === openedLoad[h]) {
+			let target = e.target.closest('.image');
+			if (target) {
 				console.log('ok');
 			} else {
 				openedLoad[h].style.display = 'none';
