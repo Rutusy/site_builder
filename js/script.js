@@ -187,7 +187,7 @@ for (let i = 0; i < gridSelectBtn.length; i++) {
 	}
 }
 
-//
+// Список переменных глобальных
 let addBtn = document.querySelectorAll('.add-btn');
 let chooseElem = document.querySelectorAll('.choose-elem');
 
