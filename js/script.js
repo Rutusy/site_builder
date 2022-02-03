@@ -30,11 +30,12 @@ function searchNewElem () {
 							`;
 			document.addEventListener("click", closePopup);
 			function closePopup(e) {
-				console.log('Funkciya start');
 				let oP = document.querySelectorAll('.img-upload');
 				let allselect = document.querySelectorAll('.img-upload > * ');
-				console.log(oP);
-				console.log(allselect);
+				document.addEventListener("click", close);
+				function close () {
+					console.log(CLOSE);
+				}
 			}
 			searchNewElem();
 		}
