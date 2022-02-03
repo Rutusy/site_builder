@@ -203,7 +203,7 @@ function openBar () {
 	chooseElem[i].style.display = '';
 }
 
-body.addEventListener('click', global);
+document.addEventListener('click', global);
 function global(e) {
   console.log(e.target);
 }
