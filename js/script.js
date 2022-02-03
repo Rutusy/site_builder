@@ -1,25 +1,5 @@
-// Функция поиска открытых img-upload и закрытие их при нажатии +
-function closePopup () {
-	let openedPopup = document.querySelectorAll('.img-upload');
-	console.log(openedPopup.length);
-	for (let h=0; h < openedPopup.length; h++) {
-		if (openedPopup[h].style.display = 'block') {
-			openedPopup[h].addEventListener("click", gogo);
-			function gogo (e) {
-				console.log(this);
-				console.log(e.target);
-			}
-		}
-		if (openedPopup[h].style.display = 'none') {
-			console.log('Скрытый '+h);
-		} 
-	};
-};
-
-
 // После каждого создания элемента обновляем коллекцию кнопок удаления и вешаем обработчик на каждую иконку
 function searchNewElem () {
-	closePopup();
 	let deleteBtn = document.querySelectorAll('.delete-btn');
 	for (let i = 0; i < deleteBtn.length; i++) {
 		deleteBtn[i].onclick = function () {
