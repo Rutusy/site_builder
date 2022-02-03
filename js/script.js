@@ -4,7 +4,7 @@ function closePopup () {
 	console.log(openedPopup.length);
 	for (let h=0; h < openedPopup.length; h++) {
 		if (openedPopup[h].style.display = 'block') {
-			openedPopup[h].addEventListener('click', function {
+			openedPopup[h].addEventListener("click", function(){
 				console.log('Отрктый попап под номером'+h);
 			};)
 		};
