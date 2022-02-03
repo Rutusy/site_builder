@@ -201,7 +201,7 @@ for (let i = 0; i < addBtn.length; i++) {
 		};
 		chooseElem[i].style.display = '';
 	}
-
+}
 document.addEventListener('click', global);
 function global(e) {
 	console.log(e.target);
