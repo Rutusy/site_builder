@@ -1,4 +1,4 @@
 # site_builder
 HTMLAcademy Project
 
-<a href="rutusy.github.io/site_builder/landing-empty.html">Go</a>
+<a href="https://rutusy.github.io/site_builder/landing-empty.html">Go</a>
