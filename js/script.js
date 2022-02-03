@@ -1,18 +1,7 @@
 // Функция поиска открытых img-upload и закрытие их при нажатии +
 function closePopup () {
-	let openedLoad = document.querySelectorAll('.img-upload');
-	for (let h=0; h < openedLoad.length; h++) {
-		document.addEventListener('click', function(e) {
-			let target = e.target.closest('.image');
-			if (target) {
-				openedLoad[h].style.display = 'block';
-				console.log('no ok');
-			} else if (!target) {
-				
-				openedLoad[h].style.display = 'none';
-			}
-		});
-	}
+	let openedPopup = document.querySelectorAll('.img-upload');
+	console.log(openedPopup.length);
 };
 
 
