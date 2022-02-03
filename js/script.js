@@ -2,21 +2,18 @@
 function closePopup () {
 	let openedLoad = document.querySelectorAll('.img-upload');
 	for (let h=0; h < openedLoad.length; h++) {
-		openedLoad[h].style.display = 'none';
+		document.addEventListener('click', function(e) {
+			if (e.target !=== openedLoad[i]) {
+				openedLoad[i].style.display = 'none';
+			}
+		});
 	}
 };
 
 
 // После каждого создания элемента обновляем коллекцию кнопок удаления и вешаем обработчик на каждую иконку
 function searchNewElem () {
-	let popup = document.querySelectorAll('.img-upload');
-	for (let i = 0; i < popup.length; i++) {
-			document.addEventListener("click", function(e) {
-			if (e.target === popup[i]) { 
-				popup[i].style.display = 'none';
-			}
-			});
-	}
+	closePopup();
 	let deleteBtn = document.querySelectorAll('.delete-btn');
 	for (let i = 0; i < deleteBtn.length; i++) {
 		deleteBtn[i].onclick = function () {
@@ -99,7 +96,6 @@ for (let i = 0; i < addBtn.length; i++) {
 			chooseElem[j].style.display = 'none';
 		}
 		chooseElem[i].style.display = '';
-		closePopup();
 
 		// Создаем обертку элементов в блоке Хэдер/Контент/Футер по нажатию +. Запрещаем создание более  одной обертки.
 		let elementsWrapper = document.createElement('div');
