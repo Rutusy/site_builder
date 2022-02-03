@@ -6,6 +6,7 @@ function closePopup () {
 			let target = e.target.closest('.image');
 			if (!target) {
 				openedLoad[h].style.display = 'none';
+				console.log('no ok');
 			};
 		});
 	}
