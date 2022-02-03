@@ -1,4 +1,4 @@
-// После каждого создания элемента обновляем коллекцию кнопок удаления и вешаем обработчик на каждую иконку
+/* После каждого создания элемента обновляем коллекцию кнопок удаления и вешаем обработчик на каждую иконку
 function searchNewElem () {
 	let deleteBtn = document.querySelectorAll('.delete-btn');
 	for (let i = 0; i < deleteBtn.length; i++) {
@@ -63,18 +63,10 @@ function searchNewElem () {
 	}
 }
 
-// Включаем переключение выбранного макета
-let gridSelectBtn = document.querySelectorAll('.grid-select__btn');
-let links = ['landing', 'blog', 'shop'];
-for (let i = 0; i < gridSelectBtn.length; i++) {
-	gridSelectBtn[i].onclick = function () {
-		window.location.href = `${links[i]}-empty.html`;
-	}
-}
 
 // Скрываем панели добавления элементов и обрабатываем клик по кнопке +
 let chooseElem = document.querySelectorAll('.choose-elem');
-let addBtn = document.querySelectorAll('.add-btn');
+
 for (let i = 0; i < addBtn.length; i++) {
 	chooseElem[i].style.display = 'none';	
 	addBtn[i].onclick = function () {
@@ -84,6 +76,7 @@ for (let i = 0; i < addBtn.length; i++) {
 		chooseElem[i].style.display = '';
 
 		// Создаем обертку элементов в блоке Хэдер/Контент/Футер по нажатию +. Запрещаем создание более  одной обертки.
+
 		let elementsWrapper = document.createElement('div');
 		elementsWrapper.className = `${addBtn[i].parentNode.tagName.toLowerCase()}__elements-wrapper`;
 		if (elementsWrapper.className === 'div__elements-wrapper') {
@@ -182,4 +175,35 @@ for (let i = 0; i < addBtn.length; i++) {
 			searchNewElem();
 		}
 	}
+}
+*/
+
+// Включаем переключение выбранного макета
+let gridSelectBtn = document.querySelectorAll('.grid-select__btn');
+let links = ['landing', 'blog', 'shop'];
+for (let i = 0; i < gridSelectBtn.length; i++) {
+	gridSelectBtn[i].onclick = function () {
+		window.location.href = `${links[i]}-empty.html`;
+	}
+}
+
+//
+let addBtn = document.querySelectorAll('.add-btn');
+let chooseElem = document.querySelectorAll('.choose-elem');
+
+// Скрываем панели добавления элементов и открываем по клику на плюс
+for (let i = 0; i < addBtn.length; i++) {
+	chooseElem[i].style.display = 'none';	
+	addBtn[i].addEventListener('click', openBar);
+	
+function openBar () {
+	for (let j = 0; j < addBtn.length; j++) {
+	  chooseElem[j].style.display = 'none';
+	}
+	chooseElem[i].style.display = '';
+}
+
+body.addEventListener('click', global);
+function global(e) {
+  console.log(e.target);
 }
