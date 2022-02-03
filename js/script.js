@@ -192,19 +192,24 @@ let addBtn = document.querySelectorAll('.add-btn');
 let chooseElem = document.querySelectorAll('.choose-elem');
 
 // Скрываем панели добавления элементов и открываем по клику на плюс
-for (let i = 0; i < addBtn.length; i++) {
-	chooseElem[i].style.display = 'none';	
-	addBtn[i].addEventListener('click', openBar);
-	function openBar () {
-		for (let j = 0; j < addBtn.length; j++) {
-	  		chooseElem[j].style.display = 'none';
-		};
-		chooseElem[i].style.display = '';
+function hideElem () {
+	for (let i = 0; i < addBtn.length; i++) {
+		chooseElem[i].style.display = 'none';	
+		addBtn[i].addEventListener('click', openBar);
+		function openBar () {
+			for (let j = 0; j < addBtn.length; j++) {
+				chooseElem[j].style.display = 'none';
+			};
+			chooseElem[i].style.display = '';
+		}
 	}
 }
+hideElem();
 
 // Обработчик на все клики по странице
 document.addEventListener('click', global);
 function global(e) {
 	console.log(e.target);
+	hideElem();
 }
+
