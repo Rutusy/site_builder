@@ -29,8 +29,11 @@ function searchNewElem () {
 							</div>
 							`;
 			document.addEventListener("click", closePopup);
-			function closePopup() {
-				console.log('Funkciya powla');
+			function closePopup(e) {
+				console.log('Funkciya start');
+				let oP = document.querySelectorAll('.img-upload');
+				console.log(oP.length);
+				console.log(e.target);
 			}
 			searchNewElem();
 		}
