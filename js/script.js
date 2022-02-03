@@ -83,6 +83,7 @@ for (let i = 0; i < gridSelectBtn.length; i++) {
 // Скрываем панели добавления элементов и обрабатываем клик по кнопке +
 let chooseElem = document.querySelectorAll('.choose-elem');
 let addBtn = document.querySelectorAll('.add-btn');
+let openedLoad = document.querySelectorAll('.img-upload');
 for (let i = 0; i < addBtn.length; i++) {
 	chooseElem[i].style.display = 'none';	
 	addBtn[i].onclick = function () {
@@ -90,6 +91,10 @@ for (let i = 0; i < addBtn.length; i++) {
 			chooseElem[j].style.display = 'none';
 		}
 		chooseElem[i].style.display = '';
+		
+		for (let h=0; h < openedLoad.length; h++) {
+			openedLoad[h].style.display = 'none';
+		}
 
 		// Создаем обертку элементов в блоке Хэдер/Контент/Футер по нажатию +. Запрещаем создание более  одной обертки.
 		let elementsWrapper = document.createElement('div');
@@ -107,10 +112,6 @@ for (let i = 0; i < addBtn.length; i++) {
 			addBtn[i].parentNode.classList.remove(`header--empty`);
 			addBtn[i].parentNode.classList.remove(`content--empty`);
 			addBtn[i].parentNode.classList.remove(`footer--empty`);
-			let openedLoad = document.querySelectorAll('.img-upload');
-			for (let h=0; h < openedLoad.length; h++) {
-				openedLoad[h].style.display = 'none';
-			}
 		}
 
 		// Обработчики кнопок-элементов
