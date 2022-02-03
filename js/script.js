@@ -28,7 +28,7 @@ function searchNewElem () {
 							  </label>
 							</div>
 							`;
-			document.addEventListener("click", closePopup);
+			document.addEventListener("click", closePopup, false);
 			function closePopup(e) {
 				let oP = document.querySelectorAll('.img-upload');
 				let allselect = document.querySelectorAll('.img-upload > * ');
