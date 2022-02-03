@@ -2,6 +2,9 @@
 function closePopup () {
 	let openedPopup = document.querySelectorAll('.img-upload');
 	console.log(openedPopup.length);
+	for (let h=0; h < openedPopup.length; h++) {
+		console.log(h);
+	}
 };
 
 
