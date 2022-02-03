@@ -4,10 +4,13 @@ function closePopup () {
 	for (let h=0; h < openedLoad.length; h++) {
 		document.addEventListener('click', function(e) {
 			let target = e.target.closest('.image');
-			if (!target) {
-				openedLoad[h].style.display = 'none';
+			if (target) {
+				openedLoad[h].style.display = 'block';
 				console.log('no ok');
-			};
+			} else if (!target) {
+				
+				openedLoad[h].style.display = 'none';
+			}
 		});
 	}
 };
