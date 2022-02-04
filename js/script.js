@@ -215,5 +215,6 @@ for (let i = 0; i < addBtn.length; i++) {
 document.addEventListener('click', global);
 function global(e) {
 	console.log(e.target);
+	console.log(addBtn[1]);
 }
 
