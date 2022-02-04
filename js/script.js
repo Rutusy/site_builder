@@ -249,7 +249,7 @@ function createWrapper(numOfWrap) {
 		}
 }
 
-// Обработчик на все клики по странице
+// Обработчик на все клики по странице с удалением открытых баров выбора элементов
 document.addEventListener('click', global);
 function global() {
 	if (change === 0) {
