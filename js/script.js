@@ -239,6 +239,7 @@ for (let i = 0; i < addBtn.length; i++) {
 // Создание пустого враппера-обертки
 let wrapper = document.createElement('div');
 function createWrapper(numOfWrap) {
+	if (chooseElem[numOfWrap].parentNode.querySelector('.content__elements-wrapper' === false) {
 		wrapper.className = `${chooseElem[numOfWrap].parentNode.tagName.toLowerCase()}__elements-wrapper`;
 		if (wrapper.className === 'div__elements-wrapper') {
 			wrapper.className = 'content__elements-wrapper';
@@ -248,6 +249,7 @@ function createWrapper(numOfWrap) {
 			chooseElem[numOfWrap].parentNode.querySelector('.placeholder').style.display = 'none';
 			chooseElem[numOfWrap].parentNode.classList.remove(`header--empty`, `content--empty`, `footer--empty`);
 		}
+	}
 }
 
 // Обработчик на все клики по странице с удалением открытых баров выбора элементов
