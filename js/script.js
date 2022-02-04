@@ -200,17 +200,20 @@ function hideElem () {
 }
 
 for (let i = 0; i < addBtn.length; i++) {
-			addBtn[i].addEventListener('click', openBar);
-			function openBar () {
-				hideElem();
-				chooseElem[i].style.display = '';
+			document.addEventListener('click', openBar);
+			function openBar (e) {
+				if (addBtn[i].contains(e.target);) {
+					hideElem();
+					chooseElem[i].style.display = '';
+				} else { 
+					console.log('fail')
+				}
 			}
 }
 
 // Обработчик на все клики по странице
 document.addEventListener('click', global);
 function global(e) {
-	hideElem();
 	console.log(e.target);
 }
 
