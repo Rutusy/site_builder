@@ -216,7 +216,7 @@ for (let i = 0; i < addBtn.length; i++) {
 	function elemBar (e) {
 		let buttons = chooseElem[i].querySelectorAll('button');
 		if (e.target === buttons[0]) {
-			if (wrapperSuch[i] === 0) {
+			if (wrapperSuch[i] === undefined) {
 				createWrapper(i);
 			};
 			chooseElem[i].parentNode.lastChild.append(h1);
