@@ -239,7 +239,7 @@ for (let i = 0; i < addBtn.length; i++) {
 // Создание пустого враппера-обертки
 let wrapper = document.createElement('div');
 function createWrapper(numOfWrap) {
-	if (chooseElem[numOfWrap].parentNode.querySelector('.content__elements-wrapper' === false) {
+	if (chooseElem[numOfWrap].parentNode.querySelector('.content__elements-wrapper') === false) {
 		wrapper.className = `${chooseElem[numOfWrap].parentNode.tagName.toLowerCase()}__elements-wrapper`;
 		if (wrapper.className === 'div__elements-wrapper') {
 			wrapper.className = 'content__elements-wrapper';
