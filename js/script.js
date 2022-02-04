@@ -1,7 +1,7 @@
 let change = 0;
 let popupimgs = document.querySelectorAll('.img-upload');
 document.addEventListener('click', global);
-function glabal() {
+function global() {
 	if (change === 1) {
 		for (let ch = 0; ch < addBtn.length; ch++) {
 			chooseElem[ch].style.display = 'none';
