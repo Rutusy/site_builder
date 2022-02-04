@@ -243,14 +243,12 @@ function createWrapper(numOfWrap) {
 			if (wrapper.className === 'div__elements-wrapper') {
 				wrapper.className = 'content__elements-wrapper';
 			}
-			if (chooseElem[numOfWrap].parentNode.querySelector(`.${wrapper.className}`) === null) {
 				if (chooseElem[numOfWrap].parentNode.querySelectorAll(`.${wrapper.className}`).length < 1) {
 					chooseElem[numOfWrap].parentNode.append(wrapper);
 					chooseElem[numOfWrap].parentNode.querySelector('.placeholder').style.display = 'none';
 					chooseElem[numOfWrap].parentNode.classList.remove(`header--empty`, `content--empty`, `footer--empty`);
 				}
 			console.log(chooseElem[numOfWrap].parentNode.querySelector(`.${wrapper.className}`).length);
-		}
 }
 
 // Обработчик на все клики по странице с удалением открытых баров выбора элементов
