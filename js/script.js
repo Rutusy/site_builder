@@ -202,17 +202,18 @@ function hideElem () {
 				};
 				chooseElem[i].style.display = '';
 				document.addEventListener('click', closeBar);
-				function closeBar(e) {
-					let elemBtn = chooseElem[i].querySelectorAll('.choose-elem__btn');
-					for (let k = 0; k < elemBtn.length; k++) {
-						if (e.target === elemBtn[k]) {
-							console.log('OK!');
-						} else if (e.target != elemBtn[k]) {
-							chooseElem[i].style.display = 'none';
-							console.log('bad');
+				
+					function closeBar(e) {
+						let elemBtn = chooseElem[i].querySelectorAll('.choose-elem__btn');
+						for (let k = 0; k < elemBtn.length; k++) {
+							if (e.target === elemBtn[k] || e.target === addBtn[i]) {
+								console.log('OK!');
+							} else if (e.target != elemBtn[k]) {
+								chooseElem[i].style.display = 'none';
+								console.log('bad');
+							}
 						}
 					}
-				}
 			}
 	}
 }
