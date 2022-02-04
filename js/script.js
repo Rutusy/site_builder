@@ -192,6 +192,7 @@ let addBtn = document.querySelectorAll('.add-btn');
 let chooseElem = document.querySelectorAll('.choose-elem');
 
 // Скрываем панели добавления элементов
+hideElem();
 function hideElem () {
 	for (let i = 0; i < addBtn.length; i++) {
 			chooseElem[i].style.display = 'none';
