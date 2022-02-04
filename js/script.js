@@ -207,7 +207,7 @@ for (let i = 0; i < addBtn.length; i++) {
 			}
 			document.addEventListener('click', closeBar);
 			function closeBar(e) {
-				if (addBtn[i].contains(e.target)) {
+				if (!addBtn[i].contains(e.target)) {
 				hideElem();
 				}
 			}
