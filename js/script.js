@@ -214,7 +214,7 @@ for (let i = 0; i < addBtn.length; i++) {
 // Обработка бара элементов
 	chooseElem[i].addEventListener('click', elemBar);
 	function elemBar (e) {
-		let buttons = chooseElem[i].querySelectorALL('button');
+		let buttons = chooseElem[i].querySelectorAll('button');
 		if (e.target === buttons[1]) {
 			console.log('okk')
 		}
