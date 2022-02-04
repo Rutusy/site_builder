@@ -205,7 +205,7 @@ for (let i = 0; i < addBtn.length; i++) {
 				if (addBtn[i].contains(e.target)) {
 					hideElem();
 					chooseElem[i].style.display = '';
-					console.log(addBtn[i].contains(e.target));
+					console.log(addBtn[i].contains(e.target))
 				} else if (document.contains(e.target)) {
 					hideElem();
 					console.log('false');
