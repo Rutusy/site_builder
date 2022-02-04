@@ -244,6 +244,8 @@ function createWrapper(numOfWrap) {
 		}
 		if (chooseElem[numOfWrap].parentNode.querySelectorAll(`.${wrapper.className}`).length < 1) {
 			chooseElem[numOfWrap].parentNode.append(wrapper);
+			chooseElem[numOfWrap].parentNode.querySelector('.placeholder').style.display = 'none';
+			chooseElem[numOfWrap].parentNode.classList.remove(`header--empty`, `content--empty`, `footer--empty`);
 		}
 }
 
