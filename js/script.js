@@ -200,7 +200,7 @@ function hideElem () {
 }
 
 for (let i = 0; i < addBtn.length; i++) {
-			document.addEventListener('click', openBar);
+			addBtn[i].addEventListener('click', openBar);
 			function openBar (e) {
 				if (addBtn[i].contains(e.target)) {
 					hideElem();
