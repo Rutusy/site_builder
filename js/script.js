@@ -238,12 +238,12 @@ for (let i = 0; i < addBtn.length; i++) {
 // Создание пустого враппера-обертки
 function createWrapper(numOfWrap) {
 	let wrapper = document.createElement('div');
-	wrapper.className = `${chooseElem[i].parentNode.tagName.toLowerCase()}__elements-wrapper`;
+	wrapper.className = `${chooseElem[numOfWrap].parentNode.tagName.toLowerCase()}__elements-wrapper`;
 		if (wrapper.className === 'div__elements-wrapper') {
 			wrapper.className = 'content__elements-wrapper';
 		}
-		if (chooseElem[i].parentNode.querySelectorAll(`.${elementsWrapper.className}`).length < 1) {
-			chooseElem[i].parentNode.append(wrapper);
+		if (chooseElem[numOfWrap].parentNode.querySelectorAll(`.${elementsWrapper.className}`).length < 1) {
+			chooseElem[numOfWrap].parentNode.append(wrapper);
 		}
 }
 
