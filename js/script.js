@@ -201,6 +201,7 @@ function hideElem () {
 }
 
 for (let i = 0; i < addBtn.length; i++) {
+// Обработка плюса
 			addBtn[i].addEventListener('click', openBar);
 			function openBar (e) {
 				if (addBtn[i].contains(e.target)) {
@@ -209,11 +210,20 @@ for (let i = 0; i < addBtn.length; i++) {
 					change = 1;
 				};
 			}
+// Обработка бара элементов
+	chooseElem[i].addEventListener('click', elemBar);
+	function elemBar (e) {
+		console.log(e.target);
+		change = 1;
+	}
 }
+
+
+
 
 // Обработчик на все клики по странице
 document.addEventListener('click', global);
-function global(e) {
+function global() {
 	if (change === 0) {
 		hideElem();
 	};
