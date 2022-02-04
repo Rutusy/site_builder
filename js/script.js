@@ -205,8 +205,9 @@ for (let i = 0; i < addBtn.length; i++) {
 				if (addBtn[i].contains(e.target)) {
 					hideElem();
 					chooseElem[i].style.display = '';
-				} else { 
-					console.log('fail')
+				}
+				if (addBtn[i].contains(e.target) == false) {
+					hideElem();
 				}
 			}
 }
@@ -214,7 +215,5 @@ for (let i = 0; i < addBtn.length; i++) {
 // Обработчик на все клики по странице
 document.addEventListener('click', global);
 function global(e) {
-	console.log(e.target);
-	console.log(addBtn[1]);
 }
 
