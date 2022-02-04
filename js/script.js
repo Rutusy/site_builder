@@ -205,6 +205,12 @@ for (let i = 0; i < addBtn.length; i++) {
 				hideElem();
 				chooseElem[i].style.display = '';
 			}
+			document.addEventListener('click', closeBar);
+			function closeBar(e) {
+				if (addBtn[i].contains(e.target)) {
+				hideElem();
+				}
+			}
 }
 
 // Обработчик на все клики по странице
