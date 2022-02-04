@@ -216,9 +216,7 @@ for (let i = 0; i < addBtn.length; i++) {
 	function elemBar (e) {
 		let buttons = chooseElem[i].querySelectorAll('button');
 		if (e.target === buttons[0]) {
-			if (chooseElem[i].parentNode.querySelector('.content__elements-wrapper').length < 1) {
-				createWrapper(i);
-			};
+			createWrapper(i);
 			chooseElem[i].parentNode.lastChild.append(h1);
 		}
 		if (e.target === buttons[1]) {
@@ -241,6 +239,7 @@ for (let i = 0; i < addBtn.length; i++) {
 // Создание пустого враппера-обертки
 let wrapper = document.createElement('div');
 function createWrapper(numOfWrap) {
+	
 		wrapper.className = `${chooseElem[numOfWrap].parentNode.tagName.toLowerCase()}__elements-wrapper`;
 		if (wrapper.className === 'div__elements-wrapper') {
 			wrapper.className = 'content__elements-wrapper';
