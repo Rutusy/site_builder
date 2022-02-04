@@ -216,7 +216,7 @@ for (let i = 0; i < addBtn.length; i++) {
 	function elemBar (e) {
 		let buttons = chooseElem[i].querySelectorAll('button');
 		if (e.target === buttons[0]) {
-			if (wrapperSuch[i] === 0) {
+			if (chooseElem[i].parentNode.querySelector('.content__elements-wrapper').length < 1) {
 				createWrapper(i);
 			};
 			chooseElem[i].parentNode.lastChild.append(h1);
@@ -240,7 +240,6 @@ for (let i = 0; i < addBtn.length; i++) {
 
 // Создание пустого враппера-обертки
 let wrapper = document.createElement('div');
-let wrapperSuch = [0, 0, 0, 0, 0, 0];
 function createWrapper(numOfWrap) {
 		wrapper.className = `${chooseElem[numOfWrap].parentNode.tagName.toLowerCase()}__elements-wrapper`;
 		if (wrapper.className === 'div__elements-wrapper') {
@@ -251,7 +250,6 @@ function createWrapper(numOfWrap) {
 			chooseElem[numOfWrap].parentNode.querySelector('.placeholder').style.display = 'none';
 			chooseElem[numOfWrap].parentNode.classList.remove(`header--empty`, `content--empty`, `footer--empty`);
 		}
-		return wrapperSuch[numOfWrap] = 1;
 }
 
 // Обработчик на все клики по странице с удалением открытых баров выбора элементов
