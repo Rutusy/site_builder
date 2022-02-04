@@ -217,7 +217,7 @@ for (let i = 0; i < addBtn.length; i++) {
 		let buttons = chooseElem[i].querySelectorAll('button');
 		if (e.target === buttons[0]) {
 			createWrapper(i);
-			wrapper.append(h1);
+			chooseElem[i].parentNode.lastChild.append(h1);
 		}
 		if (e.target === buttons[1]) {
 			createWrapper(i);
