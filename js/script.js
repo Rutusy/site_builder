@@ -205,9 +205,7 @@ for (let i = 0; i < addBtn.length; i++) {
 				if (addBtn[i].contains(e.target)) {
 					hideElem();
 					chooseElem[i].style.display = '';
-				}
-				if (addBtn[i].contains(e.target) == false) {
-					hideElem();
+					console.log(addBtn[i].contains(e.target));
 				}
 			}
 }
