@@ -1,6 +1,6 @@
 let change = 0;
 let popupimgs = document.querySelectorAll('.img-upload');
-document.addEventListener('click', global()};
+document.addEventListener('click', global);
 function glabal() {
 	if (change === 1) {
 		for (let ch = 0; ch < addBtn.length; ch++) {
