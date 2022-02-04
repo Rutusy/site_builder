@@ -216,7 +216,7 @@ for (let i = 0; i < addBtn.length; i++) {
 	function elemBar (e) {
 		let buttons = chooseElem[i].querySelectorAll('button');
 		if (e.target === buttons[0]) {
-			if (wrapperSuch[i] === undefined) {
+			if (wrapperSuch[i] === 0) {
 				createWrapper(i);
 			};
 			chooseElem[i].parentNode.lastChild.append(h1);
@@ -240,7 +240,7 @@ for (let i = 0; i < addBtn.length; i++) {
 
 // Создание пустого враппера-обертки
 let wrapper = document.createElement('div');
-let wrapperSuch;
+let wrapperSuch = [0, 0, 0, 0, 0, 0];
 function createWrapper(numOfWrap) {
 		wrapper.className = `${chooseElem[numOfWrap].parentNode.tagName.toLowerCase()}__elements-wrapper`;
 		if (wrapper.className === 'div__elements-wrapper') {
