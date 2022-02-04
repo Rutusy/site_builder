@@ -208,7 +208,7 @@ for (let i = 0; i < addBtn.length; i++) {
 					console.log(addBtn[i].contains(e.target));
 				};
 				console.log('next');
-				if (document.contains(e.target) && addBtn[i].contains(e.target)) {
+				if (document.contains(e.target)) {
 					hideElem();
 					console.log('false');
 				};
