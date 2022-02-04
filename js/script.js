@@ -190,6 +190,7 @@ for (let i = 0; i < gridSelectBtn.length; i++) {
 // Список переменных глобальных
 let addBtn = document.querySelectorAll('.add-btn');
 let chooseElem = document.querySelectorAll('.choose-elem');
+let change;
 
 // Скрываем панели добавления элементов
 hideElem();
@@ -206,11 +207,7 @@ for (let i = 0; i < addBtn.length; i++) {
 					hideElem();
 					chooseElem[i].style.display = '';
 					console.log(addBtn[i].contains(e.target));
-				};
-				console.log('next');
-				if (document.contains(e.target)) {
-					hideElem();
-					console.log('false');
+					change = 1;
 				};
 			}
 }
@@ -218,6 +215,11 @@ for (let i = 0; i < addBtn.length; i++) {
 // Обработчик на все клики по странице
 document.addEventListener('click', global);
 function global(e) {
-  console.log('global')
+	if (change === 1) {
+		console.log('global')
+	};
+	if (change === 0) {
+		hideElem();
+	};
+	change = 0;
 }
-
