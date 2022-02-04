@@ -240,15 +240,17 @@ for (let i = 0; i < addBtn.length; i++) {
 let wrapper = document.createElement('div');
 function createWrapper(numOfWrap) {
 		wrapper.className = `${chooseElem[numOfWrap].parentNode.tagName.toLowerCase()}__elements-wrapper`;
-		if (wrapper.className === 'div__elements-wrapper') {
-			wrapper.className = 'content__elements-wrapper';
+		if (chooseElem[numOfWrap].parentNode.querySelector(`.${wrapper.className}`).length < 1) {
+			if (wrapper.className === 'div__elements-wrapper') {
+				wrapper.className = 'content__elements-wrapper';
+			}
+			if (chooseElem[numOfWrap].parentNode.querySelectorAll(`.${wrapper.className}`).length < 1) {
+				chooseElem[numOfWrap].parentNode.append(wrapper);
+				chooseElem[numOfWrap].parentNode.querySelector('.placeholder').style.display = 'none';
+				chooseElem[numOfWrap].parentNode.classList.remove(`header--empty`, `content--empty`, `footer--empty`);
+			}
+			console.log(chooseElem[numOfWrap].parentNode.querySelector(`.${wrapper.className}`).length);
 		}
-		if (chooseElem[numOfWrap].parentNode.querySelectorAll(`.${wrapper.className}`).length < 1) {
-			chooseElem[numOfWrap].parentNode.append(wrapper);
-			chooseElem[numOfWrap].parentNode.querySelector('.placeholder').style.display = 'none';
-			chooseElem[numOfWrap].parentNode.classList.remove(`header--empty`, `content--empty`, `footer--empty`);
-		}
-		console.log(chooseElem[numOfWrap].parentNode.querySelector(`.${wrapper.className}`));
 }
 
 // Обработчик на все клики по странице с удалением открытых баров выбора элементов
