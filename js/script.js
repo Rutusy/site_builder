@@ -206,7 +206,10 @@ for (let i = 0; i < addBtn.length; i++) {
 					hideElem();
 					chooseElem[i].style.display = '';
 					console.log(addBtn[i].contains(e.target));
-				}
+				} else {
+					hideElem();
+					console.log(addBtn[i].contains(e.target));
+				};
 			}
 }
 
