@@ -207,7 +207,7 @@ for (let i = 0; i < addBtn.length; i++) {
 					chooseElem[i].style.display = '';
 					console.log(addBtn[i].contains(e.target));
 				};
-				if (document.contains(e.target) && addBtn[i].contains(e.target) == false) {
+				if (document.contains(e.target) && addBtn[i].contains(e.target)) {
 					hideElem();
 					console.log('false');
 				};
