@@ -1,6 +1,7 @@
 let change = 0;
 let popupimgs = document.querySelectorAll('.img-upload');
-document.addEventListener('click', function {
+document.addEventListener('click', global()};
+function glabal() {
 	if (change === 1) {
 		for (let ch = 0; ch < addBtn.length; ch++) {
 			chooseElem[ch].style.display = 'none';
@@ -10,7 +11,7 @@ document.addEventListener('click', function {
 		};
 		change = 0;
 	}
-});
+};
 
 // После каждого создания элемента обновляем коллекцию кнопок удаления и вешаем обработчик на каждую иконку
 function searchNewElem () {
