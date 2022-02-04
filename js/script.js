@@ -242,7 +242,7 @@ function createWrapper(numOfWrap) {
 		if (wrapper.className === 'div__elements-wrapper') {
 			wrapper.className = 'content__elements-wrapper';
 		}
-		if (chooseElem[numOfWrap].parentNode.querySelectorAll(`.${elementsWrapper.className}`).length < 1) {
+		if (chooseElem[numOfWrap].parentNode.querySelectorAll(`.${wrapper.className}`).length < 1) {
 			chooseElem[numOfWrap].parentNode.append(wrapper);
 		}
 }
