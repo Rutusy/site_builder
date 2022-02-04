@@ -191,19 +191,20 @@ for (let i = 0; i < gridSelectBtn.length; i++) {
 let addBtn = document.querySelectorAll('.add-btn');
 let chooseElem = document.querySelectorAll('.choose-elem');
 
-// Скрываем панели добавления элементов и открываем по клику на плюс
+// Скрываем панели добавления элементов
 function hideElem () {
 	for (let i = 0; i < addBtn.length; i++) {
 			chooseElem[i].style.display = 'none';
-			addBtn[i].addEventListener('click', openBar);
-			function openBar () {
-				for (let j = 0; j < addBtn.length; j++) {
-					chooseElem[j].style.display = 'none';
-				};
-				chooseElem[i].style.display = '';
 	}
 }
-hideElem();
+
+for (let i = 0; i < addBtn.length; i++) {
+			addBtn[i].addEventListener('click', openBar);
+			function openBar () {
+				hideElem();
+				chooseElem[i].style.display = '';
+			}
+}
 
 // Обработчик на все клики по странице
 document.addEventListener('click', global);
