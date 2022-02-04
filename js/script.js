@@ -1,3 +1,17 @@
+let change = 0;
+let popupimgs = document.querySelectorAll('.img-upload');
+document.addEventListener('click', function {
+	if (change === 1) {
+		for (let ch = 0; ch < addBtn.length; ch++) {
+			chooseElem[ch].style.display = 'none';
+		};	
+		for (let imag = 0; imag < popupimgs.length; imag++) {
+			popupimgs[imag].style.display = 'none';
+		};
+		change = 0;
+	}
+});
+
 // После каждого создания элемента обновляем коллекцию кнопок удаления и вешаем обработчик на каждую иконку
 function searchNewElem () {
 	let deleteBtn = document.querySelectorAll('.delete-btn');
@@ -182,4 +196,5 @@ for (let i = 0; i < addBtn.length; i++) {
 			searchNewElem();
 		}
 	}
+	change = 1;
 }
