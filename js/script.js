@@ -216,5 +216,6 @@ for (let i = 0; i < addBtn.length; i++) {
 // Обработчик на все клики по странице
 document.addEventListener('click', global);
 function global(e) {
+  console.log('global')
 }
 
