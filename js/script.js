@@ -200,6 +200,7 @@ function hideElem () {
 	}
 }
 
+//================================================================================================
 for (let i = 0; i < addBtn.length; i++) {
 // Обработка плюса
 			addBtn[i].addEventListener('click', openBar);
@@ -213,13 +214,20 @@ for (let i = 0; i < addBtn.length; i++) {
 // Обработка бара элементов
 	chooseElem[i].addEventListener('click', elemBar);
 	function elemBar (e) {
-		console.log(e.target);
+		let buttons = chooseElem[i].querySelectorALL('button');
+		if (e.target === buttons[1]) {
+			console.log('okk')
+		}
+		if (e.target === buttons[2]) {
+			console.log('okk')
+		}
+		if (e.target === buttons[3]) {
+			console.log('okk')
+		}
 		change = 1;
 	}
 }
-
-
-
+//==================================================================================================
 
 // Обработчик на все клики по странице
 document.addEventListener('click', global);
