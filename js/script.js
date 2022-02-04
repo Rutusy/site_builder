@@ -243,7 +243,7 @@ function createWrapper(numOfWrap) {
 			if (wrapper.className === 'div__elements-wrapper') {
 				wrapper.className = 'content__elements-wrapper';
 			}
-			if (chooseElem[numOfWrap].parentNode.querySelector(`.${wrapper.className}`).length === null) {
+			if (chooseElem[numOfWrap].parentNode.querySelector(`.${wrapper.className}`) === null) {
 				if (chooseElem[numOfWrap].parentNode.querySelectorAll(`.${wrapper.className}`).length < 1) {
 					chooseElem[numOfWrap].parentNode.append(wrapper);
 					chooseElem[numOfWrap].parentNode.querySelector('.placeholder').style.display = 'none';
