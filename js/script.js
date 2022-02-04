@@ -215,19 +215,37 @@ for (let i = 0; i < addBtn.length; i++) {
 	chooseElem[i].addEventListener('click', elemBar);
 	function elemBar (e) {
 		let buttons = chooseElem[i].querySelectorAll('button');
+		if (e.target === buttons[0]) {
+			createWrapper(i);
+		}
 		if (e.target === buttons[1]) {
-			console.log('okk')
+			createWrapper(i);
 		}
 		if (e.target === buttons[2]) {
-			console.log('okk')
+			createWrapper(i);
 		}
 		if (e.target === buttons[3]) {
-			console.log('okk')
+			createWrapper(i);
+		}
+		if (e.target === buttons[4]) {
+			createWrapper(i);
 		}
 		change = 1;
 	}
 }
 //==================================================================================================
+
+// Создание пустого враппера-обертки
+function createWrapper(numOfWrap) {
+	let wrapper = document.createElement('div');
+	wrapper.className = `${chooseElem[i].parentNode.tagName.toLowerCase()}__elements-wrapper`;
+		if (wrapper.className === 'div__elements-wrapper') {
+			wrapper.className = 'content__elements-wrapper';
+		}
+		if (chooseElem[i].parentNode.querySelectorAll(`.${elementsWrapper.className}`).length < 1) {
+			chooseElem[i].parentNode.append(wrapper);
+		}
+}
 
 // Обработчик на все клики по странице
 document.addEventListener('click', global);
