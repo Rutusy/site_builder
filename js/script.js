@@ -217,6 +217,7 @@ for (let i = 0; i < addBtn.length; i++) {
 		let buttons = chooseElem[i].querySelectorAll('button');
 		if (e.target === buttons[0]) {
 			createWrapper(i);
+			wrapper.append(h1);
 		}
 		if (e.target === buttons[1]) {
 			createWrapper(i);
@@ -257,3 +258,39 @@ function global() {
 	};
 	change = 0;
 }
+
+// Создаем блоки для добавления
+			let h1 = document.createElement('div');
+			h1.className = 'element title';
+			h1.innerHTML = `
+							  <h1 contenteditable="true" data-placeholder="Заголовок H1"></h1>
+							  <button type="button" class="delete-btn">
+							  <span class="visually-hidden">Удалить элемент</span>
+							</button>
+							`;
+			let h2 = document.createElement('div');
+			h2.className = 'element title';
+			h2.innerHTML = `
+							  <h2 contenteditable="true" data-placeholder="Заголовок H2"></h2>
+							  <button type="button" class="delete-btn">
+							  <span class="visually-hidden">Удалить элемент</span>
+							</button>
+							`;
+			let h3 = document.createElement('div');
+			h3.className = 'element title';
+			h3.innerHTML = `
+							  <h3 contenteditable="true" data-placeholder="Заголовок H3"></h3>
+							  <button type="button" class="delete-btn">
+							  <span class="visually-hidden">Удалить элемент</span>
+							</button>
+							`;
+			let text = document.createElement('div');
+			text.className = 'element text';
+			text.innerHTML = `
+							  <p contenteditable="true" data-placeholder="Абзац текста"></p>
+							  <button type="button" class="delete-btn">
+							  <span class="visually-hidden">Удалить элемент</span>
+							</button>
+							`;
+
+
