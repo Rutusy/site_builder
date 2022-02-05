@@ -267,7 +267,13 @@ function imgPopup(i) {
 	changeForPopup = 1;
 }
 function uploadImg () {
-  
+  for (let label of document.querySelectorAll('.img-upload__label')) {
+  	label.addEventListener('click', function (e) {
+		e.preventDefault();
+		let urlImg = label.parentNode.querySelector('input[type="url"]').value;
+		consol.log(urlImg);
+	}
+  }
 }
 
 // Создание пустого враппера-обертки
