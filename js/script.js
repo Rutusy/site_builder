@@ -252,6 +252,7 @@ function imgPopup(i) {
       imgBlock[b].parentNode.querySelector('.img-upload').style.display = 'block';
     })
   }
+	changeForPopup = 1;
 }
 
 // Создание пустого враппера-обертки
@@ -277,7 +278,9 @@ function global() {
 	change = 0;
 	
 	if (changeForPopup === 0) {
-	  
+		for (let elem of document.querySelectorAll('.img-upload')) {
+			elem.style.display = 'none';
+		}
 	}
 	changeForPopup = 0;
 	
