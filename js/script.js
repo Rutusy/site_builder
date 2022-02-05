@@ -217,7 +217,7 @@ for (let i = 0; i < addBtn.length; i++) {
 		let buttons = chooseElem[i].querySelectorAll('button');
 		if (e.target === buttons[0]) {
 			createWrapper(i);
-			console.log(chooseElem[i].parentNode.lastChild);
+			chooseElem[i].parentNode.lastChild.append(h1.cloneNode(true));
 		}
 		if (e.target === buttons[1]) {
 			createWrapper(i);
