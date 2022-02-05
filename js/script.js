@@ -221,12 +221,15 @@ for (let i = 0; i < addBtn.length; i++) {
 		}
 		if (e.target === buttons[1]) {
 			createWrapper(i);
+			chooseElem[i].parentNode.lastChild.append(h2.cloneNode(true));
 		}
 		if (e.target === buttons[2]) {
 			createWrapper(i);
+			chooseElem[i].parentNode.lastChild.append(h3.cloneNode(true));
 		}
 		if (e.target === buttons[3]) {
 			createWrapper(i);
+			chooseElem[i].parentNode.lastChild.append(text.cloneNode(true));
 		}
 		if (e.target === buttons[4]) {
 			createWrapper(i);
