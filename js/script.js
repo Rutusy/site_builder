@@ -251,6 +251,7 @@ function imgPopup(i) {
     imgBlock[b].addEventListener('click', function () {
       console.log('st3')
       imgBlock[b].parentNode.querySelector('.img-upload').style.display = 'block';
+	    changeForPopup = 1;
     })
   }
 	changeForPopup = 1;
