@@ -271,7 +271,7 @@ function uploadImg () {
   	label.addEventListener('click', function (e) {
 		e.preventDefault();
 		let urlImg = label.parentNode.querySelector('input[type="url"]').value;
-		consol.log(urlImg);
+		console.log(urlImg);
 	})
   }
 }
