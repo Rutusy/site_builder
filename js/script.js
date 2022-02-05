@@ -253,13 +253,13 @@ function deleteBlock () {
 }
 
 function imgPopup(i) {
-  console.log('st1')
   let imgBlock = document.querySelectorAll('.add-img-btn');
   for (let b=0; b < imgBlock.length; b++) {
-    console.log('st2 ' + b)
     imgBlock[b].addEventListener('click', function () {
-      console.log('st3')
       imgBlock[b].parentNode.querySelector('.img-upload').style.display = 'block';
+      imgBlock[b].parentNode.querySelector('.img-upload').addEventListener('click', function() {
+	    changeForPopup = 1;
+      });
 	    changeForPopup = 1;
     })
   }
