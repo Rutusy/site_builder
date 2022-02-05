@@ -1,7 +1,7 @@
 // Включаем переключение выбранного макета
 let gridSelectBtn = document.querySelectorAll('.grid-select__btn');
 let links = ['landing', 'blog', 'shop'];
-	gridSelectBtn[1].onclick = function () {
+	gridSelectBtn[0].onclick = function () {
 		window.location.href = `index.html`;
 	}
 for (let i = 1; i < gridSelectBtn.length; i++) {
