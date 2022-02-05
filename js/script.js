@@ -234,11 +234,17 @@ for (let i = 0; i < addBtn.length; i++) {
 		if (e.target === buttons[4]) {
 			createWrapper(i);
 			chooseElem[i].parentNode.lastChild.append(img.cloneNode(true));
+			imgPopup (i);
 		}
 		change = 1;
 	}
 }
 //==================================================================================================
+
+//
+function imgPopup (i) {
+	
+}
 
 // Создание пустого враппера-обертки
 function createWrapper(numOfWrap) {	
