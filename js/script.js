@@ -243,7 +243,8 @@ for (let i = 0; i < addBtn.length; i++) {
 
 //
 function imgPopup (i) {
-	
+	let popup = document.querySelectorAll('.img-upload');
+	console.log(popup.length);
 }
 
 // Создание пустого враппера-обертки
