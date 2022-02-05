@@ -191,6 +191,7 @@ for (let i = 0; i < gridSelectBtn.length; i++) {
 let addBtn = document.querySelectorAll('.add-btn');
 let chooseElem = document.querySelectorAll('.choose-elem');
 let change;
+let changeForPopup;
 
 // Скрываем панели добавления элементов
 hideElem();
@@ -242,10 +243,6 @@ for (let i = 0; i < addBtn.length; i++) {
 //==================================================================================================
 
 //
-function imgPopup (i) {
-	let popup = document.querySelectorAll('.img-upload');
-	console.log(popup.length);
-}
 
 // Создание пустого враппера-обертки
 function createWrapper(numOfWrap) {	
@@ -268,6 +265,12 @@ function global() {
 		hideElem();
 	};
 	change = 0;
+	
+	if (changeForPopup === 0) {
+	  
+	}
+	changeForPopup = 0;
+	
 }
 
 // Создаем блоки для добавления
