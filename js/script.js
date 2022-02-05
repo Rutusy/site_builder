@@ -260,10 +260,14 @@ function imgPopup(i) {
       imgBlock[b].parentNode.querySelector('.img-upload').addEventListener('click', function() {
 	    changeForPopup = 1;
       });
+      uploadImg();
 	    changeForPopup = 1;
     })
   }
 	changeForPopup = 1;
+}
+function uploadImg () {
+  
 }
 
 // Создание пустого враппера-обертки
