@@ -245,7 +245,7 @@ for (let i = 0; i < addBtn.length; i++) {
 function imgPopup(i) {
   let imgBlock = document.querySelectorAll('.add-image-btn');
   for (let b=0; b < imgBlock.length; b++) {
-    imgBlock[b].addEventListener('click', function {
+    imgBlock[b].addEventListener('click', function () {
       imgBlock[b].parentNode.querySelector('.img-upload').style.display = 'block';
     })
   }
