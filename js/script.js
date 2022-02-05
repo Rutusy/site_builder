@@ -1,11 +1,10 @@
-if (window.location.pathname.split("/").pop() === 'index.html') {
-	window.location.href = `landing-empty.html`;
-}
-
 // Включаем переключение выбранного макета
 let gridSelectBtn = document.querySelectorAll('.grid-select__btn');
 let links = ['landing', 'blog', 'shop'];
-for (let i = 0; i < gridSelectBtn.length; i++) {
+	gridSelectBtn[1].onclick = function () {
+		window.location.href = `index.html`;
+	}
+for (let i = 1; i < gridSelectBtn.length; i++) {
 	gridSelectBtn[i].onclick = function () {
 		window.location.href = `${links[i]}-empty.html`;
 	}
