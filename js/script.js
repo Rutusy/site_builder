@@ -244,7 +244,7 @@ for (let i = 0; i < addBtn.length; i++) {
 
 function imgPopup(i) {
   console.log('st1')
-  let imgBlock = document.querySelectorAll('.add-image-btn');
+  let imgBlock = document.querySelectorAll('.add-img-btn');
   for (let b=0; b < imgBlock.length; b++) {
     console.log('st2 ' + b)
     imgBlock[b].addEventListener('click', function () {
