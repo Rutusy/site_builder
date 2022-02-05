@@ -217,7 +217,7 @@ for (let i = 0; i < addBtn.length; i++) {
 		let buttons = chooseElem[i].querySelectorAll('button');
 		if (e.target === buttons[0]) {
 			createWrapper(i);
-			chooseElem[i].parentNode.lastChild.append(h1);
+			console.log(chooseElem[i].parentNode.lastChild);
 		}
 		if (e.target === buttons[1]) {
 			createWrapper(i);
@@ -248,7 +248,6 @@ function createWrapper(numOfWrap) {
 					chooseElem[numOfWrap].parentNode.querySelector('.placeholder').style.display = 'none';
 					chooseElem[numOfWrap].parentNode.classList.remove(`header--empty`, `content--empty`, `footer--empty`);
 				}
-			console.log(chooseElem[numOfWrap].parentNode.querySelector(`.${wrapper.className}`).length);
 }
 
 // Обработчик на все клики по странице с удалением открытых баров выбора элементов
