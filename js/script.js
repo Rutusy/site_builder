@@ -272,7 +272,7 @@ function uploadImg () {
 		e.preventDefault();
 		let urlImg = label.parentNode.querySelector('input[type="url"]').value;
 		consol.log(urlImg);
-	}
+	})
   }
 }
 
