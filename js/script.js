@@ -1,3 +1,5 @@
+window.location.href = `landing-empty.html`;
+
 // Включаем переключение выбранного макета
 let gridSelectBtn = document.querySelectorAll('.grid-select__btn');
 let links = ['landing', 'blog', 'shop'];
