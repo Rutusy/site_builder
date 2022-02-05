@@ -6,7 +6,7 @@ let links = ['landing', 'blog', 'shop'];
 	}
 for (let i = 1; i < gridSelectBtn.length; i++) {
 	gridSelectBtn[i].onclick = function () {
-		window.location.href = `${links[i]}-empty.html`;
+		window.location.href = `${links[i]}.html`;
 	}
 }
 
