@@ -239,9 +239,18 @@ for (let i = 0; i < addBtn.length; i++) {
 		}
 		change = 1;
 		changeForPopup = 1;
+		deleteBlock ();
 	}
 }
 //==================================================================================================
+
+function deleteBlock () {
+  for (let dlt of document.querySelectorAll('.delete-btn')) {
+    dlt.addEventListener('click', function () {
+      dlt.parentNode.style.display = 'none'
+    })
+  }
+}
 
 function imgPopup(i) {
   console.log('st1')
